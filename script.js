@@ -39,7 +39,4 @@ function createCard (name, location, photo, description){
     cardBody.appendChild(cardSubtitle);
 
 
-
-
-
 }
