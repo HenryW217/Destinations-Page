@@ -5,83 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Destinations Page</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   </head>
 
-  <body>
-    <script src="./script.js"></script>
+<!--     <link rel="stylesheet" href="./style.css" /> -->
+  </head>
+  <body class="container">
 
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container text-center">
-        <h1 class="display-4">Vacation Destinations WishList</h1>
-        <p class="lead">
-          Found exciting places to visition on your next vacation? Use the form
-          below to add them to your wishlist
-        </p>
+    <div class="row">
+      <div class="col-12">
+        <h1>Vacation Destinations WishList</h1>
+        <h4>Found exciting places to visition on your next vacation? Use the form below to add them to your wishlist</h4>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <form id="userForm">
-            <div class="form-group">
-              <label for="name">Destination name</label>
-              <input
-                required=""
-                minlength="2"
-                type="text"
-                class="form-control"
-                id="name"
-                placeholder="Enter the name of the destination"
-              />
-            </div>
-            <div class="form-group">
-              <label for="location">Location</label>
-              <input
-                type="text"
-                class="form-control"
-                id="location"
-                placeholder="Where is it located?"
-              />
-            </div>
-            <div class="form-group">
-              <label for="photo">Photo</label>
-              <input
-                type="url"
-                class="form-control"
-                id="photo"
-                placeholder="Enter an image url of the place"
-              />
-            </div>
-            <div class="form-group">
-              <label for="description">Description</label>
-              <textarea
-                type="text"
-                class="form-control"
-                id="description"
-                placeholder="Where is it located?"
-              ></textarea>
-            </div>
-            <button
-              id="sub_btn"
-              type="submit"
-              class="btn btn-primary submit_btn"
-            >
-              Add to list
-            </button>
-          </form>
+
+    <div class="row">
+      <div class="col-6">
+        <form id="dest_form">
+          <input  type="text" name="" id="loc_name" placeholder="Enter location" required>
+          <input type="text" name="" id="dest_name" placeholder="Enter destination" required>
+
+          <input type="url" name="" id="photo_url" placeholder="Enter photo url">
+          <textarea name="" id="description" cols="30" rows="10" placeholder="Enter description"></textarea>
+         
+
+          <input type="submit" value="Add to wishlist">
+        </form>
+      </div>
+      <div class="col-6">
+        <div class="row">
+          <p id="dynamic_title">Enter destination details</p>
         </div>
-        <div class="col-md-9">
-          <h4 id="title">Enter destination details</h4>
-          <div id="destinations_container"></div>
+        <div class="row" id="cards_container">
+
         </div>
       </div>
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
